@@ -1,7 +1,15 @@
 package com.bdkutilities.sugar
 
-public inline val Int.sat get() = this.toULong()
-public inline val Long.sat get() = this
+public inline val Int.sat: ULong
+    get() {
+        return if (this < 0) throw Exception("Satoshi value cannot be negative") else this.toULong()
+    }
+
+
+public inline val Long.sat: ULong
+    get() {
+        return if (this < 0) throw Exception("Satoshi value cannot be negative") else this.toULong()
+    }
 
 public inline val Int.btc: ULong
     get() {

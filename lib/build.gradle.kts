@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.7.21"
     id("java-library")
@@ -20,6 +22,10 @@ tasks.jar {
 
 java {
     withSourcesJar()
+}
+
+kotlin {
+    explicitApi = ExplicitApiMode.Strict
 }
 
 repositories {
