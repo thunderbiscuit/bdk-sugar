@@ -22,6 +22,7 @@ tasks.jar {
 
 java {
     withSourcesJar()
+    withJavadocJar()
 }
 
 kotlin {

@@ -1,7 +1,6 @@
 package com.bdkutilities.sugar
 
 import kotlin.test.Test
-import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
 
 class UnitsTests {
